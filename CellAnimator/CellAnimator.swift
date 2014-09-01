@@ -30,6 +30,42 @@ let TransformCurl = { (layer: CALayer) -> CATransform3D in
     return transform
 }
 
+let TransformFan = { (layer: CALayer) -> CATransform3D in
+    var transform = CATransform3DIdentity
+    transform = CATransform3DTranslate(transform, -layer.bounds.size.width/2.0, 0.0, 0.0)
+    transform = CATransform3DRotate(transform, -CGFloat(M_PI)/2.0, 0.0, 0.0, 1.0)
+    transform = CATransform3DTranslate(transform, layer.bounds.size.width/2.0, 0.0, 0.0)
+    return transform
+}
+
+let TransformFlip = { (layer: CALayer) -> CATransform3D in
+    var transform = CATransform3DIdentity
+    transform = CATransform3DTranslate(transform, 0.0, layer.bounds.size.height/2.0, 0.0)
+    transform = CATransform3DRotate(transform, CGFloat(M_PI)/2.0, 1.0, 0.0, 0.0)
+    transform = CATransform3DTranslate(transform, 0.0, layer.bounds.size.height/2.0, 0.0)
+    return transform
+}
+
+let TransformHelix = { (layer: CALayer) -> CATransform3D in
+    var transform = CATransform3DIdentity
+    transform = CATransform3DTranslate(transform, 0.0, layer.bounds.size.height/2.0, 0.0)
+    transform = CATransform3DRotate(transform, CGFloat(M_PI), 0.0, 1.0, 0.0)
+    transform = CATransform3DTranslate(transform, 0.0, -layer.bounds.size.height/2.0, 0.0)
+    return transform
+}
+
+let TransformTilt = { (layer: CALayer) -> CATransform3D in
+    var transform = CATransform3DIdentity
+    transform = CATransform3DScale(transform, 0.8, 0.8, 0.8)
+    return transform
+}
+
+let TransformWave = { (layer: CALayer) -> CATransform3D in
+    var transform = CATransform3DIdentity
+    transform = CATransform3DTranslate(transform, -layer.bounds.size.width/2.0, 0.0, 0.0)
+    return transform
+}
+
 class CellAnimator {
     
     class func animateCell(cell:UITableViewCell, withTransform transform: (CALayer) -> CATransform3D, andDuration duration: NSTimeInterval) {

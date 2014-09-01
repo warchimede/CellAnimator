@@ -55,7 +55,7 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView!, willDisplayCell cell: UITableViewCell!, forRowAtIndexPath indexPath: NSIndexPath!) {
-        CellAnimator.animateCell(cell, withTransform: TransformTipIn, andDuration: 0.4)
+        CellAnimator.animateCell(cell, withTransform: TransformWave, andDuration: 1)
     }
 
 }
