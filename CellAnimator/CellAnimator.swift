@@ -70,15 +70,13 @@ class CellAnimator {
     
     class func animateCell(cell:UITableViewCell, withTransform transform: (CALayer) -> CATransform3D, andDuration duration: NSTimeInterval) {
         
-        if let view = cell.contentView {
+        let view = cell.contentView    
+        view.layer.transform = transform(cell.layer)
+        view.layer.opacity = 0.8
             
-            view.layer.transform = transform(cell.layer)
-            view.layer.opacity = 0.8
-            
-            UIView.animateWithDuration(duration) {
-                view.layer.transform = CATransform3DIdentity
-                view.layer.opacity = 1
-            }
+        UIView.animateWithDuration(duration) {
+            view.layer.transform = CATransform3DIdentity
+            view.layer.opacity = 1
         }
     }
 }

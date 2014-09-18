@@ -45,7 +45,7 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
         let object = objects[indexPath.row] as NSDate
-        cell.textLabel.text = object.description
+        cell.textLabel?.text = object.description
         return cell
     }
 
@@ -54,7 +54,7 @@ class MasterViewController: UITableViewController {
         return false
     }
 
-    override func tableView(tableView: UITableView!, willDisplayCell cell: UITableViewCell!, forRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         CellAnimator.animateCell(cell, withTransform: TransformWave, andDuration: 1)
     }
 
