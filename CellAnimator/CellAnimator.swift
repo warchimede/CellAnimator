@@ -14,7 +14,7 @@ class CellAnimator {
     static let TransformTipIn = { (layer: CALayer) -> CATransform3D in
         let rotationDegrees: CGFloat = -15.0
         let rotationRadians: CGFloat = rotationDegrees * (CGFloat(M_PI)/180.0)
-        let offset = CGPointMake(-20, -20)
+        let offset = CGPoint(x: -20, y: -20)
         var transform = CATransform3DIdentity
         transform = CATransform3DRotate(transform, rotationRadians, 0.0, 0.0, 1.0)
         transform = CATransform3DTranslate(transform, offset.x, offset.y, 0.0)
