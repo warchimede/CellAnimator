@@ -1,22 +1,22 @@
 //
-//  MasterViewController.swift
+//  ViewController.swift
 //  CellAnimator
 //
-//  Created by William Archimede on 29/08/2014.
-//  Copyright (c) 2014 HoodBrains. All rights reserved.
+//  Created by William Archimède on 12/09/2015.
+//  Copyright © 2015 William Archimède. All rights reserved.
 //
 
 import UIKit
 
-class MasterViewController: UITableViewController {
-
+class ViewController: UITableViewController {
+    
     var objects: [NSDate] = []
-
-
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,38 +25,37 @@ class MasterViewController: UITableViewController {
             objects.append(NSDate())
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table View
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-
+        
         let object = objects[indexPath.row] as NSDate
         cell.textLabel?.text = object.description
         return cell
     }
-
+    
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return false
     }
-
+    
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        CellAnimator.animateCell(cell, withTransform: TransformWave, andDuration: 1)
+        CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformWave, andDuration: 1)
     }
-
+    
 }
-
