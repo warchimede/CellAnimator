@@ -14,7 +14,7 @@ Then, in your **UITableViewController**, override the **tableView:willDisplayCel
     }
 
 ## Configuration
-Here are the currently available transforms you can use to customize the animation 
+Here are the currently available transforms you can use to customize the animation
 when calling **CellAnimator.animateCell:withTransform:andDuration:** :
 
   + `TransformTipIn`
@@ -28,4 +28,4 @@ when calling **CellAnimator.animateCell:withTransform:andDuration:** :
 ## License
 This control was made available under the MIT License
 
-If you use it and like it, let me know: [@sgwilly](http://twitter.com/sgwilly)
+If you use it and like it, let me know: [@warchimede](http://twitter.com/warchimede)
