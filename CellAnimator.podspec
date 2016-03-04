@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "CellAnimator"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Cool animations for UITableViewCell in Swift language"
 
   s.description  = "This pod provides the ability to animate UITableViewCell when they appear."
