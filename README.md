@@ -16,7 +16,7 @@ In your `UITableViewController`, import `CellAnimator` and override the `tableVi
 import CellAnimator
 ...
 override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-    CellAnimator.animateCell(cell, withTransform: TransformWave, andDuration: 1)
+    CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformWave, andDuration: 1)
 }
 ```
 
@@ -45,7 +45,7 @@ To try the example project, clone the repo, and run the project.
 ## Installation
 
 CellAnimator is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+it, simply add the following line to your Podfile :
 
 ```ruby
 pod "CellAnimator"
