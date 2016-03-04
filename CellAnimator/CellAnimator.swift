@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class CellAnimator {
+public class CellAnimator {
     
     static let TransformTipIn = { (layer: CALayer) -> CATransform3D in
         let rotationDegrees: CGFloat = -15.0
@@ -68,7 +68,7 @@ class CellAnimator {
         return transform
     }
     
-    class func animateCell(cell: UITableViewCell, withTransform transform: (CALayer) -> CATransform3D, andDuration duration: NSTimeInterval) {
+    public class func animateCell(cell: UITableViewCell, withTransform transform: (CALayer) -> CATransform3D, andDuration duration: NSTimeInterval) {
         
         let view = cell.contentView    
         view.layer.transform = transform(cell.layer)
