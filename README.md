@@ -1,4 +1,5 @@
 # CellAnimator
+
 [![CI Status](https://img.shields.io/travis/warchimede/CellAnimator.svg?style=flat)](https://travis-ci.org/warchimede/CellAnimator)
 [![Version](https://img.shields.io/cocoapods/v/CellAnimator.svg?style=flat)](http://cocoapods.org/pods/CellAnimator)
 [![License](https://img.shields.io/cocoapods/l/CellAnimator.svg?style=flat)](http://cocoapods.org/pods/CellAnimator)
