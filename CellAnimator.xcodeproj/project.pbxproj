@@ -12,7 +12,7 @@
 		5C39173A1BA4B56000515C54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3917381BA4B56000515C54 /* Main.storyboard */; };
 		5C39173C1BA4B56000515C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C39173B1BA4B56000515C54 /* Assets.xcassets */; };
 		5C39173F1BA4B56000515C54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C39173D1BA4B56000515C54 /* LaunchScreen.storyboard */; };
-		5C3917471BA4B60100515C54 /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3917461BA4B60100515C54 /* CellAnimator.swift */; settings = {ASSET_TAGS = (); }; };
+		5C3917471BA4B60100515C54 /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3917461BA4B60100515C54 /* CellAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,7 +182,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
