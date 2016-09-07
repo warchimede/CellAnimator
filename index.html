@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>CellAnimator by warchimede</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">CellAnimator</h1>
+      <h2 class="project-tagline">Cool animations for UITableViewCell in Swift language</h2>
+      <a href="https://github.com/warchimede/CellAnimator" class="btn">View on GitHub</a>
+      <a href="https://github.com/warchimede/CellAnimator/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/warchimede/CellAnimator/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="cellanimator" class="anchor" href="#cellanimator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CellAnimator</h1>
+
+<p><a href="https://travis-ci.org/warchimede/CellAnimator"><img src="https://img.shields.io/travis/warchimede/CellAnimator.svg?style=flat" alt="CI Status"></a>
+<a href="http://cocoapods.org/pods/CellAnimator"><img src="https://img.shields.io/cocoapods/v/CellAnimator.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/CellAnimator"><img src="https://img.shields.io/cocoapods/l/CellAnimator.svg?style=flat" alt="License"></a>
+<a href="http://cocoapods.org/pods/CellAnimator"><img src="https://img.shields.io/cocoapods/p/CellAnimator.svg?style=flat" alt="Platform"></a></p>
+
+<h2>
+<a id="summary" class="anchor" href="#summary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Summary</h2>
+
+<p>Cool animations for <code>UITableViewCell</code> in Swift language</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>In your <code>UITableViewController</code>, import <code>CellAnimator</code> and override the <code>tableView:willDisplayCell:forRowAtIndexPath:</code> function :</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">import</span> <span class="pl-c1">CellAnimator</span>
+<span class="pl-k">...</span>
+<span class="pl-k">override</span> <span class="pl-k">func</span> <span class="pl-en">tableView</span>(tableView: UITableView, <span class="pl-en">willDisplayCell</span> <span class="pl-smi">cell</span>: UITableViewCell, <span class="pl-en">forRowAtIndexPath</span> <span class="pl-smi">indexPath</span>: NSIndexPath) {
+    CellAnimator<span class="pl-k">.</span>animateCell(cell, withTransform: CellAnimator<span class="pl-k">.</span>TransformWave, andDuration: <span class="pl-c1">1</span>)
+}</pre></div>
+
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h2>
+
+<p>Here are the currently available transforms you can use to customize the animation
+when calling <code>CellAnimator.animateCell:withTransform:andDuration:</code> :</p>
+
+<ul>
+<li><code>TransformTipIn</code></li>
+<li><code>TransformCurl</code></li>
+<li><code>TransformFan</code></li>
+<li><code>TransformFlip</code></li>
+<li><code>TransformHelix</code></li>
+<li><code>TransformTilt</code></li>
+<li><code>TransformWave</code></li>
+</ul>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h2>
+
+<p>To try the example project, clone the repo, and run the project.</p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>ARC</li>
+<li>iOS 8</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>CellAnimator is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile :</p>
+
+<div class="highlight highlight-source-ruby"><pre>pod <span class="pl-s"><span class="pl-pds">"</span>CellAnimator<span class="pl-pds">"</span></span></pre></div>
+
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Author</h2>
+
+<p>William Archimede, <a href="mailto:william.archimede@hoodbrains.com">william.archimede@hoodbrains.com</a></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>CellAnimator is available under the MIT license. See the LICENSE file for more info.</p>
+
+<p>If you use it and like it, let me know: <a href="http://twitter.com/warchimede">@warchimede</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/warchimede/CellAnimator">CellAnimator</a> is maintained by <a href="https://github.com/warchimede">warchimede</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
