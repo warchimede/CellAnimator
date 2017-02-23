@@ -68,13 +68,13 @@ public class CellAnimator {
         return transform
     }
     
-    public class func animateCell(cell: UITableViewCell, withTransform transform: (CALayer) -> CATransform3D, andDuration duration: NSTimeInterval) {
+    public class func animateCell(cell: UITableViewCell, withTransform transform: (CALayer) -> CATransform3D, andDuration duration: TimeInterval) {
         
         let view = cell.contentView    
         view.layer.transform = transform(cell.layer)
         view.layer.opacity = 0.8
             
-        UIView.animateWithDuration(duration) {
+        UIView.animate(withDuration: duration) {
             view.layer.transform = CATransform3DIdentity
             view.layer.opacity = 1
         }
