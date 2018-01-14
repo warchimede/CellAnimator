@@ -5,15 +5,16 @@
 //  Created by William Archimede on 29/08/2014.
 //  Copyright (c) 2014 HoodBrains. All rights reserved.
 //
+//  Updated by Alexander Loren on 14/01/2018
+//
 
 import UIKit
-import QuartzCore
 
 public class CellAnimator {
     
     public static let TransformTipIn = { (layer: CALayer) -> CATransform3D in
         let rotationDegrees: CGFloat = -15.0
-        let rotationRadians: CGFloat = rotationDegrees * (CGFloat(M_PI)/180.0)
+        let rotationRadians: CGFloat = rotationDegrees * (CGFloat(Double.pi)/180.0)
         let offset = CGPoint(x: -20, y: -20)
         var transform = CATransform3DIdentity
         transform = CATransform3DRotate(transform, rotationRadians, 0.0, 0.0, 1.0)
@@ -26,7 +27,7 @@ public class CellAnimator {
         var transform = CATransform3DIdentity
         transform.m34 = 1.0 / -500
         transform = CATransform3DTranslate(transform, -layer.bounds.size.width/2.0, 0.0, 0.0)
-        transform = CATransform3DRotate(transform, CGFloat(M_PI)/2.0, 0.0, 1.0, 0.0)
+        transform = CATransform3DRotate(transform, CGFloat(Double.pi)/2.0, 0.0, 1.0, 0.0)
         transform = CATransform3DTranslate(transform, layer.bounds.size.width/2.0, 0.0, 0.0)
         
         return transform
@@ -35,7 +36,7 @@ public class CellAnimator {
     public static let TransformFan = { (layer: CALayer) -> CATransform3D in
         var transform = CATransform3DIdentity
         transform = CATransform3DTranslate(transform, -layer.bounds.size.width/2.0, 0.0, 0.0)
-        transform = CATransform3DRotate(transform, -CGFloat(M_PI)/2.0, 0.0, 0.0, 1.0)
+        transform = CATransform3DRotate(transform, -CGFloat(Double.pi)/2.0, 0.0, 0.0, 1.0)
         transform = CATransform3DTranslate(transform, layer.bounds.size.width/2.0, 0.0, 0.0)
         return transform
     }
@@ -43,7 +44,7 @@ public class CellAnimator {
     public static let TransformFlip = { (layer: CALayer) -> CATransform3D in
         var transform = CATransform3DIdentity
         transform = CATransform3DTranslate(transform, 0.0, layer.bounds.size.height/2.0, 0.0)
-        transform = CATransform3DRotate(transform, CGFloat(M_PI)/2.0, 1.0, 0.0, 0.0)
+        transform = CATransform3DRotate(transform, CGFloat(Double.pi)/2.0, 1.0, 0.0, 0.0)
         transform = CATransform3DTranslate(transform, 0.0, layer.bounds.size.height/2.0, 0.0)
         return transform
     }
@@ -51,7 +52,7 @@ public class CellAnimator {
     public static let TransformHelix = { (layer: CALayer) -> CATransform3D in
         var transform = CATransform3DIdentity
         transform = CATransform3DTranslate(transform, 0.0, layer.bounds.size.height/2.0, 0.0)
-        transform = CATransform3DRotate(transform, CGFloat(M_PI), 0.0, 1.0, 0.0)
+        transform = CATransform3DRotate(transform, CGFloat(Double.pi), 0.0, 1.0, 0.0)
         transform = CATransform3DTranslate(transform, 0.0, -layer.bounds.size.height/2.0, 0.0)
         return transform
     }
