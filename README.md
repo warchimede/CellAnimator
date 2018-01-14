@@ -55,6 +55,7 @@ pod "CellAnimator"
 ## Author
 
 William Archimede, william.archimede@hoodbrains.com
+Alexander Loren, lorenalexm@gmail.com (Swift 4 Updates)
 
 Alexander Loren, lorenalexm@gmail.com (Swift 4 Updates)
 
