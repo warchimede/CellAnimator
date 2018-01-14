@@ -17,22 +17,22 @@ In your `UITableViewController`, import `CellAnimator` and override the `tableVi
 import CellAnimator
 ...
 override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-    CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformWave, andDuration: 1)
+    CellAnimator.animate(cell, withDuration: 1, animation: .Wave)
 }
 ```
 
 ## Configuration
 
 Here are the currently available transforms you can use to customize the animation
-when calling `CellAnimator.animateCell:withTransform:andDuration:` :
+when calling `CellAnimator.animateCell:withDuration:animation:` :
 
-  + `TransformTipIn`
-  + `TransformCurl`
-  + `TransformFan`
-  + `TransformFlip`
-  + `TransformHelix`
-  + `TransformTilt`
-  + `TransformWave`
+  + `AnimationType.TipIn`
+  + `AnimationType.Curl`
+  + `AnimationType.Fan`
+  + `AnimationType.Flip`
+  + `AnimationType.Helix`
+  + `AnimationType.Tilt`
+  + `AnimationType.Wave`
 
 ## Example
 
@@ -41,7 +41,7 @@ To try the example project, clone the repo, and run the project.
 ## Requirements
 
   + ARC
-  + iOS 8
+  + iOS 9
 
 ## Installation
 
@@ -55,6 +55,8 @@ pod "CellAnimator"
 ## Author
 
 William Archimede, william.archimede@hoodbrains.com
+
+Alexander Loren, lorenalexm@gmail.com (Swift 4 Updates)
 
 ## License
 
